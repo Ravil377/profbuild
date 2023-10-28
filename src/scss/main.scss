@@ -1,0 +1,84 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+// подключения компонентов страницы
+@import "./components/header";
+
+// тестовые стили, удалите их
+.page__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--vh);
+}
+.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+.logo {
+  width: 170px;
+  height: 51px;
+  display: flex;
+  grid-area: logo;
+  align-self: center;
+}
+.btn {
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0 23px;
+  min-height: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  color: black;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: -0.15px;
+  width: fit-content;
+  height: fit-content;
+  transition: .4s;
+  &:not([class]) {
+    background: white;
+  }
+  &._transparent {
+    border: 1px solid #73567A;
+    color: #FFF;
+  }
+  &._orange {
+    background: var(--orange-color);
+    color: #FFF;
+    &:hover {
+      background: #FFF;
+      color: var(--orange-color);
+    }
+  }
+  &:hover {
+    background: var(--orange-color);
+    color: white;
+  }
+}
+
+.phone {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.4px;
+  transition: .4s;
+  grid-area: phone;
+  align-self: center;
+  &:hover {
+    color: var(--orange-color);
+  }
+}
