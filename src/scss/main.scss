@@ -27,9 +27,13 @@
   display: flex;
   grid-area: logo;
   align-self: center;
+  .logo__word {
+    fill: white;
+  }
 }
 .btn {
   align-items: center;
+  justify-content: center;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -65,20 +69,5 @@
   &:hover {
     background: var(--orange-color);
     color: white;
-  }
-}
-
-.phone {
-  color: #FFF;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-  letter-spacing: -0.4px;
-  transition: .4s;
-  grid-area: phone;
-  align-self: center;
-  &:hover {
-    color: var(--orange-color);
   }
 }
