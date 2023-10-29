@@ -8,6 +8,8 @@
 // подключения компонентов страницы
 @import "./components/header";
 
+@import "./components/takepart";
+
 // тестовые стили, удалите их
 .page__body {
   display: flex;
@@ -69,5 +71,27 @@
   &:hover {
     background: var(--orange-color);
     color: white;
+  }
+}
+.main {
+  z-index: 20;
+  position: relative;   
+  @media (min-width: 1240px) {
+    // z-index: 11;
+    // position: relative;   
+  }
+}
+
+.title {
+  color: #000;
+  font-family: Inter;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -0.8px;
+  margin: unset;
+  @media (min-width: 992px) {
+    font-size: 40px;
   }
 }
