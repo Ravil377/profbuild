@@ -9,6 +9,8 @@
 @import "./components/header";
 
 @import "./components/takepart";
+@import "./components/shedule";
+@import "./components/form";
 
 // тестовые стили, удалите их
 .page__body {
@@ -56,6 +58,14 @@
   &:not([class]) {
     background: white;
   }
+  &._gray {
+    border: 1px solid #C7D0D4;
+    color: #898B90;
+  }
+  &._fiolet {
+    color: #36195A;
+    border: 1px solid #CDB5D3;
+  }
   &._transparent {
     border: 1px solid #73567A;
     color: #FFF;
@@ -95,3 +105,155 @@
     font-size: 40px;
   }
 }
+
+
+.form__placeholder-container {
+  position: relative;
+  width: 100%;
+}
+
+.form__placeholder-container input, .form__placeholder-container textarea {
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  background: transparent;
+  border: 1px solid #D4DADC;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  width: 100%;
+  font-weight: 500;
+  color: #000000;
+  font-size: 0.875rem;
+  line-height: 90%;
+  color: #191C1F;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  min-height: 40px;
+}
+@media (min-width: 576px) {
+  .form__placeholder-container input, .form__placeholder-container textarea {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 30px;
+    padding-right: 30px;
+    min-height: 50px;
+    font-size: 1.125rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+/* .form__placeholder-container textarea {
+  box-sizing: border-box;
+  outline: none;
+  width: 100%;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0B2349;
+  background: #F4F3F8;
+  padding-top: 19px;
+  padding-left: 21px;
+  min-height: 60px;
+  border: 2px solid #F4F3F8;
+  box-sizing: border-box;
+  padding-bottom: 19px;
+} */
+
+.form__placeholder-container label {
+  width: fit-content;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 90%;
+  color: #000000;
+  pointer-events: none;
+  position: absolute;
+  transition: all 200ms;
+  top: 14px;
+  left: 19px;
+}
+@media (min-width: 576px) {
+  .form__placeholder-container label {
+    font-size: 1.125rem;
+	top: 25px;
+  }
+
+}
+.wpcf7-spinner {display: none;}
+.form__placeholder-container label span {
+  font-size: 0.75rem;
+  color: #A4A4A4;
+}
+
+.form__placeholder-container input:focus + label,
+.form__placeholder-container input:not(:placeholder-shown) + label {
+  top: -16px;
+  left: 0;
+}
+
+.form__placeholder-container textarea:focus + label,
+.form__placeholder-container textarea:not(:placeholder-shown) + label {
+  top: -16px;
+  left: 0;
+}
+
+.form__checkbox {
+  height: fit-content;
+  position: relative;
+}
+.form__checkbox label {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 110%;
+  color: #9FA2A7;
+  position: relative;
+  padding-left: 33px;
+  z-index: 2;
+}
+.form__checkbox label a {
+  color: #6f42c1;
+  transition: 0.4s;
+}
+.form__checkbox label a:hover {
+  text-decoration: underline;
+}
+.form__checkbox label::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: -1px;
+  border: 1px solid #9FA2A7;
+  border-radius: 4px;
+  transition: 0.4s ease-in;
+}
+.form__checkbox label::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  left: -2px;
+  transform: rotate(90deg);
+  top: 1px;
+  height: 5px;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  transition: 0.2s ease-in;
+  z-index: -1;
+}
+.form__checkbox input {
+  display: none;
+}
+.form__checkbox input:checked ~ label::after {
+  transform: rotate(-45deg);
+  left: 6px;
+  top: 5px;
+  z-index: 1;
+  border-left: 2px solid #9FA2A7;
+  border-bottom: 2px solid #9FA2A7;
+}
+

@@ -4,10 +4,20 @@
     position: relative;
     z-index: 2;
     padding-top: 30px;
+    padding-bottom: 40px;
     border-radius: 30px;
     background: #F3F5F6;
     max-width: 1652px;
     width: 100%;
+    .title {
+        text-align: center;
+        @media (min-width: 992px) {
+            text-align: unset;
+        }
+    }
+    @media (min-width:992px) {
+        padding-bottom: 65px;
+    }
 }
 .takepart__list {
     display: grid;

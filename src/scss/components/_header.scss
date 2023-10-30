@@ -293,10 +293,7 @@
     .logo {
         max-width: 142px;
         height: 42px;
-        .logo__word {
-            // transition-duration: .4s;
-            // transition-delay: .3s;
-        }
+ 
         &.logo--active {
             .logo__word {
                 fill: #000;
@@ -431,15 +428,15 @@
             gap: 14px;
         }
         button.btn, a.btn {
+            font-size: 18px;
+            height: 50px;
             @media (max-width: 991px) {
                 width: 100%;
             }
         }
     }
 }
-.header.header--active + .main {
-    // z-index: 1;
-}
+
 .alert {
     background: var(--alert-color);
     p {
