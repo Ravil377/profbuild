@@ -1,4 +1,6 @@
 .form {
+    padding-top: 30px;
+    overflow: hidden;
     .container {
         @media (max-width: 993px) {
             padding: unset;
@@ -10,6 +12,7 @@
     background: #36195A;
     padding: 33px 21px;
     padding-bottom: unset;
+    
     display: grid;
     column-gap: 10px;
     row-gap: 35px;

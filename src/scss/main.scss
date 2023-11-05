@@ -11,6 +11,8 @@
 @import "./components/takepart";
 @import "./components/shedule";
 @import "./components/form";
+@import "./components/seo";
+@import "./components/advantages";
 
 // тестовые стили, удалите их
 .page__body {
@@ -69,6 +71,14 @@
   &._transparent {
     border: 1px solid #73567A;
     color: #FFF;
+  }
+  &._black {
+    background: #000;
+    color: #FFF;
+    &:hover {
+      background: var(--orange-color);
+      // color: var(--orange-color);
+    }
   }
   &._orange {
     background: var(--orange-color);
