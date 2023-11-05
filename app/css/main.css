@@ -1258,43 +1258,289 @@ a.target-burger ul.buns li.bun:last-child {
   }
 }
 
+@media (max-width: 993px) {
+  .form .container {
+    padding: unset;
+  }
+}
+
 .form__container {
   border-radius: 20px;
   background: #36195A;
-  padding: 39px 61px;
+  padding: 33px 21px;
+  padding-bottom: unset;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-  grid-template-columns: auto auto auto;
-  -ms-grid-rows: auto auto;
-  grid-template-rows: auto auto;
-  grid-template-areas: "image content form" "image cont form";
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  row-gap: 35px;
+  -ms-grid-columns: 100px 10px auto;
+  grid-template-columns: 100px auto;
+  -ms-grid-rows: auto 35px auto 35px auto;
+  grid-template-areas: "content content" "form form" "image cont";
 }
-.form__container > img {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
+@media (min-width: 992px) {
+  .form__container {
+    -ms-grid-columns: 143px auto;
+    grid-template-columns: 143px auto;
+  }
+}
+@media (min-width: 992px) {
+  .form__container {
+    -ms-grid-columns: 200px 45px auto 45px auto;
+    grid-template-columns: 200px auto auto;
+    -ms-grid-rows: auto 30px;
+    grid-template-rows: auto 30px;
+    grid-template-areas: "image content form" "image cont form";
+    padding: 39px 61px;
+    padding-bottom: 40px;
+    padding-left: 0;
+    -webkit-column-gap: 45px;
+    -moz-column-gap: 45px;
+    column-gap: 45px;
+  }
+}
+@media (min-width: 1240px) {
+  .form__container {
+    -ms-grid-columns: 297px auto auto;
+    grid-template-columns: 297px auto auto;
+    padding-left: 61px;
+  }
+}
+.form__container > .form__image {
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
+  position: relative;
   grid-area: image;
+}
+@media (max-width: 993px) {
+  .form__container > .form__image {
+    margin-top: auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media (min-width: 992px) {
+  .form__container > .form__image > img {
+    position: absolute;
+    height: calc(100% + 142px);
+    top: -72px;
+  }
 }
 .form__container .form__content {
   -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: content;
+  max-width: 411px;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .form__container .form__content {
+    margin: unset;
+  }
 }
 .form__container .form__content > img {
   width: 107px;
   height: 32px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (min-width: 992px) {
+  .form__container .form__content > img {
+    margin: unset;
+  }
+}
+.form__container .form__content > p {
+  margin: unset;
+  margin-top: 10px;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .form__container .form__content > p {
+    font-size: 30px;
+    text-align: unset;
+    margin-top: 20px;
+  }
+}
+.form__container .form__content > p span {
+  display: block;
+  margin-top: 10px;
+  color: #EBEDF3;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+@media (min-width: 992px) {
+  .form__container .form__content > p span {
+    margin-top: 20px;
+    font-size: 16px;
+  }
 }
 .form__container .form__contacts {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
   grid-area: cont;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  row-gap: 10px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+@media (min-width: 576px) {
+  .form__container .form__contacts {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media (min-width: 992px) {
+  .form__container .form__contacts {
+    margin-top: unset;
+  }
+}
+.form__container .form__contacts > a {
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.4px;
+}
+@media (min-width: 992px) {
+  .form__container .form__contacts > a {
+    font-size: 20px;
+  }
+}
+.form__container .form__contacts .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 13px;
+  -moz-column-gap: 13px;
+  column-gap: 13px;
+}
+@media (min-width: 992px) {
+  .form__container .form__contacts .social {
+    -webkit-column-gap: 17px;
+    -moz-column-gap: 17px;
+    column-gap: 17px;
+  }
+}
+.form__container .form__contacts .social > a {
+  width: 22px;
+  height: 22px;
+}
+@media (min-width: 992px) {
+  .form__container .form__contacts .social > a {
+    width: 30px;
+    height: 30px;
+  }
+}
+.form__container .form__contacts .social > a svg .social__link-circle {
+  fill: #FFF;
+}
+.form__container .form__contacts .social > a svg .social__link-icon {
+  fill: #36195A;
 }
 .form__container .form__form {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 3;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: form;
+  margin: auto 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media (min-width: 992px){
+  .form__container > .form__image {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+  }
+  .form__container .form__content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+  .form__container .form__contacts {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .form__container .form__form {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+  }
+}
+.form__container .form__form > p {
+  margin: unset;
+  margin-top: 4px;
+  color: #EBEDF3;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 13.2px */
+  letter-spacing: -0.12px;
+}
+.form__container .form__form input[type=submit] {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 14px;
+}
+@media (min-width: 576px) {
+  .form__container .form__form input[type=submit] {
+    min-height: 60px;
+  }
+}
+.form__container .form__form input[type=submit] + p {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10px;
+  max-width: 290px;
+}
+@media (min-width: 576px) {
+  .form__container .form__form input[type=submit] + p {
+    margin-top: 15px;
+  }
 }
 
 .page__body {
@@ -1433,39 +1679,33 @@ a.target-burger ul.buns li.bun:last-child {
   width: 100%;
 }
 
-.form__placeholder-container input, .form__placeholder-container textarea {
-  font-family: "Montserrat", sans-serif;
-  border: none;
-  background: transparent;
-  border: 1px solid #D4DADC;
-  border-radius: 4px;
+.form__placeholder-container input,
+.form__placeholder-container textarea {
+  border-radius: 10px;
+  border: 1px solid #D6D8DF;
+  background: #FFF;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
   width: 100%;
-  font-weight: 500;
-  color: #000000;
-  font-size: 0.875rem;
-  line-height: 90%;
-  color: #191C1F;
-  padding-left: 20px;
-  padding-right: 20px;
+  color: #000;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  padding-left: 15px;
+  padding-right: 15px;
   box-sizing: border-box;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  min-height: 40px;
+  min-height: 50px;
 }
 
 @media (min-width: 576px) {
-  .form__placeholder-container input, .form__placeholder-container textarea {
-    padding-top: 13px;
-    padding-bottom: 13px;
-    padding-left: 30px;
-    padding-right: 30px;
-    min-height: 50px;
-    font-size: 1.125rem;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  .form__placeholder-container input,
+  .form__placeholder-container textarea {
+    padding-left: 25px;
+    padding-right: 25px;
+    min-height: 60px;
   }
 }
 /* .form__placeholder-container textarea {
@@ -1488,22 +1728,24 @@ a.target-burger ul.buns li.bun:last-child {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 90%;
-  color: #000000;
+  color: #000;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
   pointer-events: none;
   position: absolute;
   -webkit-transition: all 200ms;
   transition: all 200ms;
   top: 14px;
-  left: 19px;
+  left: 15px;
 }
 
 @media (min-width: 576px) {
   .form__placeholder-container label {
-    font-size: 1.125rem;
-    top: 25px;
+    top: 19px;
+    left: 25px;
   }
 }
 .wpcf7-spinner {
@@ -1516,34 +1758,52 @@ a.target-burger ul.buns li.bun:last-child {
 }
 
 .form__placeholder-container input:not(:-moz-placeholder-shown) + label {
-  top: -16px;
+  top: -20px;
   left: 0;
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -0.14px;
 }
 
 .form__placeholder-container input:not(:-ms-input-placeholder) + label {
-  top: -16px;
+  top: -20px;
   left: 0;
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -0.14px;
 }
 
 .form__placeholder-container input:focus + label,
 .form__placeholder-container input:not(:placeholder-shown) + label {
-  top: -16px;
+  top: -20px;
   left: 0;
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -0.14px;
 }
 
 .form__placeholder-container textarea:not(:-moz-placeholder-shown) + label {
-  top: -16px;
+  top: -20px;
   left: 0;
 }
 
 .form__placeholder-container textarea:not(:-ms-input-placeholder) + label {
-  top: -16px;
+  top: -20px;
   left: 0;
 }
 
 .form__placeholder-container textarea:focus + label,
 .form__placeholder-container textarea:not(:placeholder-shown) + label {
-  top: -16px;
+  top: -20px;
   left: 0;
 }
 

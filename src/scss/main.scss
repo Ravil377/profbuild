@@ -112,37 +112,46 @@
   width: 100%;
 }
 
-.form__placeholder-container input, .form__placeholder-container textarea {
-  font-family: "Montserrat", sans-serif;
-  border: none;
-  background: transparent;
-  border: 1px solid #D4DADC;
-  border-radius: 4px;
+.form__placeholder-container input, 
+.form__placeholder-container textarea {
+  // border: none;
+  border-radius: 10px;
+  border: 1px solid #D6D8DF;
+  background: #FFF;
   box-sizing: border-box;
   outline: none;
   width: 100%;
-  font-weight: 500;
-  color: #000000;
-  font-size: 0.875rem;
-  line-height: 90%;
-  color: #191C1F;
-  padding-left: 20px;
-  padding-right: 20px;
+
+  color: #000;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+
+
+
+  padding-left: 15px;
+  padding-right: 15px;
   box-sizing: border-box;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  min-height: 40px;
+  // padding-top: 5px;
+  // padding-bottom: 5px;
+  min-height: 50px;
 }
 @media (min-width: 576px) {
-  .form__placeholder-container input, .form__placeholder-container textarea {
-    padding-top: 13px;
-    padding-bottom: 13px;
-    padding-left: 30px;
-    padding-right: 30px;
-    min-height: 50px;
-    font-size: 1.125rem;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  .form__placeholder-container input, 
+  .form__placeholder-container textarea {
+    padding-left: 25px;
+    padding-right: 25px;
+    min-height: 60px;
+    // padding-top: 13px;
+    // padding-bottom: 13px;
+    // padding-left: 30px;
+    // padding-right: 30px;
+    // min-height: 50px;
+    // font-size: 1.125rem;
+    // padding-top: 20px;
+    // padding-bottom: 20px;
   }
 }
 
@@ -165,20 +174,23 @@
 
 .form__placeholder-container label {
   width: fit-content;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 90%;
-  color: #000000;
+  color: #000;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; 
+  
   pointer-events: none;
   position: absolute;
   transition: all 200ms;
   top: 14px;
-  left: 19px;
+  left: 15px;
 }
 @media (min-width: 576px) {
   .form__placeholder-container label {
-    font-size: 1.125rem;
-	top: 25px;
+    top: 19px;
+    left: 25px;
   }
 
 }
@@ -190,13 +202,19 @@
 
 .form__placeholder-container input:focus + label,
 .form__placeholder-container input:not(:placeholder-shown) + label {
-  top: -16px;
+  top: -20px;
   left: 0;
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -0.14px;
 }
 
 .form__placeholder-container textarea:focus + label,
 .form__placeholder-container textarea:not(:placeholder-shown) + label {
-  top: -16px;
+  top: -20px;
   left: 0;
 }
 
