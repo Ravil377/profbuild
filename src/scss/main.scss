@@ -7,7 +7,7 @@
 
 // подключения компонентов страницы
 @import "./components/header";
-
+@import "./components/footer";
 @import "./components/takepart";
 @import "./components/shedule";
 @import "./components/form";
@@ -44,7 +44,7 @@
   border-radius: 10px;
   cursor: pointer;
   padding: 0 23px;
-  min-height: 40px;
+  min-height: 50px;
   display: flex;
   flex-wrap: nowrap;
   color: black;
@@ -57,6 +57,9 @@
   width: fit-content;
   height: fit-content;
   transition: .4s;
+  @media (min-width: 992px) {
+    min-height: 60px;
+  }
   &:not([class]) {
     background: white;
   }
