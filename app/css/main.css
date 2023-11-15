@@ -2718,7 +2718,7 @@ a.target-burger ul.buns li.bun:last-child {
     padding: 24px 33px;
   }
 }
-.shedule__list > li > ul > li > div {
+.shedule__list > li > ul > li a > div {
   padding: 2px 5px;
   border-radius: 5px;
   width: -webkit-fit-content;
@@ -2733,21 +2733,21 @@ a.target-burger ul.buns li.bun:last-child {
   line-height: 110%;
 }
 @media (min-width: 992px) {
-  .shedule__list > li > ul > li > div {
+  .shedule__list > li > ul > li a > div {
     top: 13px;
     right: 25px;
     font-size: 12px;
   }
 }
-.shedule__list > li > ul > li .shedule__edited {
+.shedule__list > li > ul > li a .shedule__edited {
   border: 1px solid #898B90;
   color: #898B90;
 }
-.shedule__list > li > ul > li .shedule__new {
+.shedule__list > li > ul > li a .shedule__new {
   background: #F36600;
   color: #FFF;
 }
-.shedule__list > li > ul > li > .shedule__text {
+.shedule__list > li > ul > li a > .shedule__text {
   margin: unset;
   margin-top: 4px;
   color: #38383F;
@@ -2757,12 +2757,12 @@ a.target-burger ul.buns li.bun:last-child {
   line-height: 110%;
 }
 @media (min-width: 992px) {
-  .shedule__list > li > ul > li > .shedule__text {
+  .shedule__list > li > ul > li a > .shedule__text {
     font-size: 16px;
     margin-top: 8px;
   }
 }
-.shedule__list > li > ul > li > .shedule__date {
+.shedule__list > li > ul > li a > .shedule__date {
   margin: unset;
   color: #36195A;
   font-size: 16px;
@@ -2771,11 +2771,11 @@ a.target-burger ul.buns li.bun:last-child {
   line-height: 110%;
 }
 @media (min-width: 992px) {
-  .shedule__list > li > ul > li > .shedule__date {
+  .shedule__list > li > ul > li a > .shedule__date {
     font-size: 20px;
   }
 }
-.shedule__list > li > ul > li > .shedule__salary {
+.shedule__list > li > ul > li a > .shedule__salary {
   margin: unset;
   margin-top: 4px;
   color: #36195A;
@@ -2785,7 +2785,7 @@ a.target-burger ul.buns li.bun:last-child {
   line-height: 110%;
 }
 @media (min-width: 992px) {
-  .shedule__list > li > ul > li > .shedule__salary {
+  .shedule__list > li > ul > li a > .shedule__salary {
     font-size: 18px;
   }
 }

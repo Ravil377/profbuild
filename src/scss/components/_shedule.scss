@@ -83,71 +83,74 @@
                 @media (min-width: 992px) {
                     padding: 24px 33px;
                 }
-                & > div {
-                    padding: 2px 5px;
-                    border-radius: 5px; 
-                    width: fit-content;
-                    position: absolute;
-                    top: 10px;
-                    right: 9px;
-                    
-                    font-size: 11px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 110%; 
-                    @media (min-width: 992px) {
-                        top: 13px;
-                        right: 25px;
-                        font-size: 12px;
+                a {
+                    & > div {
+                        padding: 2px 5px;
+                        border-radius: 5px; 
+                        width: fit-content;
+                        position: absolute;
+                        top: 10px;
+                        right: 9px;
+                        
+                        font-size: 11px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 110%; 
+                        @media (min-width: 992px) {
+                            top: 13px;
+                            right: 25px;
+                            font-size: 12px;
+                        }
                     }
-                }
-
-                .shedule__edited {
-                    border: 1px solid #898B90;
-                    color: #898B90;
-                    
-                }
-                .shedule__new {
-                    background: #F36600;
-                    color: #FFF;
-                }
-            
-                & > .shedule__text {
-                    margin: unset;
-                    margin-top: 4px;
-                    color: #38383F;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 110%;
-                    @media (min-width: 992px) {
+    
+                    .shedule__edited {
+                        border: 1px solid #898B90;
+                        color: #898B90;
+                        
+                    }
+                    .shedule__new {
+                        background: #F36600;
+                        color: #FFF;
+                    }
+                
+                    & > .shedule__text {
+                        margin: unset;
+                        margin-top: 4px;
+                        color: #38383F;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 110%;
+                        @media (min-width: 992px) {
+                            font-size: 16px;
+                            margin-top: 8px;
+                        }
+                    }
+                    & > .shedule__date {
+                        margin: unset;
+                        color: #36195A;
                         font-size: 16px;
-                        margin-top: 8px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 110%;
+                        @media (min-width: 992px) {
+                            font-size: 20px;
+                        }
+                    }
+                    & > .shedule__salary {
+                        margin: unset;
+                        margin-top: 4px;
+                        color: #36195A;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 110%;
+                        @media (min-width: 992px) {
+                            font-size: 18px;
+                        }
                     }
                 }
-                & > .shedule__date {
-                    margin: unset;
-                    color: #36195A;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 110%;
-                    @media (min-width: 992px) {
-                        font-size: 20px;
-                    }
-                }
-                & > .shedule__salary {
-                    margin: unset;
-                    margin-top: 4px;
-                    color: #36195A;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 110%;
-                    @media (min-width: 992px) {
-                        font-size: 18px;
-                    }
-                }
+                
             }
         }
     }
