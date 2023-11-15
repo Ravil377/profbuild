@@ -1611,7 +1611,7 @@ a.target-burger ul.buns li.bun:last-child {
     font-size: 44px;
   }
 }
-.takepart:not(._about):not(._single) {
+.takepart:not(._about):not(._single):not(.advantages) {
   margin-top: -50px;
 }
 @media (min-width: 992px) {
