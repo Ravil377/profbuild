@@ -71,9 +71,27 @@
                 &.dropdown {
                     position: relative;
                     cursor: pointer;
+                    padding-right: 15px;
+                    &::after {
+                        content: '';
+                        width: 8px;
+                        height: 5px;
+                        position: absolute;
+                        right: 0;
+                        top: 55%;
+                        transform: translateY(-50%);
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='5' viewBox='0 0 7 5' fill='none'%3E%3Cpath d='M6 1.5L3.5 4L1 1.5' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        transition: .4s;
+                    }
                     &:hover {
+                        &::after {
+                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='5' viewBox='0 0 7 5' fill='none'%3E%3Cpath d='M6 4L3.5 1.5L1 4' stroke='%23F36600' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                        }
                         & > a {
                             padding-bottom: 10px;
+                            color: var(--orange-color);
                         }
                         
                         ul {
