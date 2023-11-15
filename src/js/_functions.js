@@ -3,7 +3,8 @@
 
 // Определение операционной системы на мобильных
 import { mobileCheck } from "./functions/mobile-check";
-console.log(mobileCheck())
+
+// console.log(mobileCheck())
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -19,6 +20,7 @@ console.log(mobileCheck())
 
 // Фикс фулскрин-блоков
 import './functions/fix-fullheight';
+import './functions/more-button';
 
 // Реализация бургер-меню
 import { burger } from './functions/burger';

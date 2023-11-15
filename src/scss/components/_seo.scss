@@ -3,19 +3,29 @@
 }
 
 .seo-block {
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-    @media (min-width: 992px) {
-        padding-top: 60px;
-        padding-bottom: 60px;  
-        padding-left: 60px;
-        padding-right: 60px;
+    &._about {
+        .pink {
+            @media (min-width: 1024px) {
+                padding-left: 197px;
+                padding-right: 197px;              
+            }
+        }
     }
-    @media (min-width: 1024px) {
-        padding-left: 112px;
-        padding-right: 112px;
+    &:not(._about) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        @media (min-width: 992px) {
+            padding-top: 60px;
+            padding-bottom: 60px;  
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+        @media (min-width: 1024px) {
+            padding-left: 112px;
+            padding-right: 112px;
+        }
     }
+    
     & > p {
         margin: unset;
         color: #38383F;

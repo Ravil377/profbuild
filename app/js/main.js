@@ -21,13 +21,16 @@ console.log('components');
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/mobile-check */ "./src/js/functions/mobile-check.js");
 /* harmony import */ var _functions_fix_fullheight__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/fix-fullheight */ "./src/js/functions/fix-fullheight.js");
-/* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functions/burger */ "./src/js/functions/burger.js");
+/* harmony import */ var _functions_more_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functions/more-button */ "./src/js/functions/more-button.js");
+/* harmony import */ var _functions_more_button__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_functions_more_button__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./functions/burger */ "./src/js/functions/burger.js");
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
 // Определение операционной системы на мобильных
 
-console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)());
+
+// console.log(mobileCheck())
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -42,6 +45,7 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)
 // window.addEventListener('resize', func);
 
 // Фикс фулскрин-блоков
+
 
 
 // Реализация бургер-меню
@@ -312,6 +316,21 @@ const mobileCheck = () => {
   }
   return "unknown";
 };
+
+/***/ }),
+
+/***/ "./src/js/functions/more-button.js":
+/*!*****************************************!*\
+  !*** ./src/js/functions/more-button.js ***!
+  \*****************************************/
+/***/ (() => {
+
+const button = document.getElementById('toggleButton');
+const list = document.getElementById('toggleList');
+button?.addEventListener('click', () => {
+  list.classList.toggle('_open');
+  list.classList.contains('_open') ? button.textContent = 'Свернуть все' : button.textContent = 'Показать все';
+});
 
 /***/ }),
 
