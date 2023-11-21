@@ -13,6 +13,7 @@
 @import "./components/form";
 @import "./components/seo";
 @import "./components/advantages";
+@import "./components/modal";
 
 // тестовые стили, удалите их
 .page__body {
@@ -147,8 +148,6 @@
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box;
-  // padding-top: 5px;
-  // padding-bottom: 5px;
   min-height: 50px;
 }
 @media (min-width: 576px) {
@@ -157,33 +156,8 @@
     padding-left: 25px;
     padding-right: 25px;
     min-height: 60px;
-    // padding-top: 13px;
-    // padding-bottom: 13px;
-    // padding-left: 30px;
-    // padding-right: 30px;
-    // min-height: 50px;
-    // font-size: 1.125rem;
-    // padding-top: 20px;
-    // padding-bottom: 20px;
   }
 }
-
-/* .form__placeholder-container textarea {
-  box-sizing: border-box;
-  outline: none;
-  width: 100%;
-  border: none;
-  font-weight: 600;
-  font-size: 1rem;
-  color: #0B2349;
-  background: #F4F3F8;
-  padding-top: 19px;
-  padding-left: 21px;
-  min-height: 60px;
-  border: 2px solid #F4F3F8;
-  box-sizing: border-box;
-  padding-bottom: 19px;
-} */
 
 .form__placeholder-container label {
   width: fit-content;
@@ -217,13 +191,23 @@
 .form__placeholder-container input:not(:placeholder-shown) + label {
   top: -20px;
   left: 0;
-  color: #FFF;
+
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 110%;
   letter-spacing: -0.14px;
 }
+.form__placeholder-container:not(._black) input:focus + label,
+.form__placeholder-container:not(._black) input:not(:placeholder-shown) + label {
+  color: #FFF;
+}
+
+.form__placeholder-container._black input:focus + label,
+.form__placeholder-container._black input:not(:placeholder-shown) + label {
+  color: #000;
+}
+
 
 .form__placeholder-container textarea:focus + label,
 .form__placeholder-container textarea:not(:placeholder-shown) + label {
