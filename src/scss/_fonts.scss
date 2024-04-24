@@ -1,1 +1,4 @@
-// @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+@include fontFace('GillSans', 'GillSansC', 400, 'normal', 'woff2');
+@include fontFace('GillSans', 'GillSansC', 400, 'normal', 'woff');
+@include fontFace('GillSans', 'GillSansC-Bold', 600, 'normal', 'woff2');
+@include fontFace('GillSans', 'GillSansC-Bold', 600, 'normal', 'woff');

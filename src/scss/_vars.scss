@@ -2,8 +2,8 @@
 // colors
 :root {
   // base
-  --font-family: "Manrope", sans-serif;
-  --content-width: 1400px;
+  --font-family: "Onest", sans-serif;
+  --content-width: 1280px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
@@ -13,4 +13,8 @@
   --alert-color: #F0F1CC;
   --fiolet-color: #36195A;
   --gray-color: #38383F;
+  --hover: #C59E15;
+  --ss: #DDE2E9;
+  --s: #838694;
+  --g: #C59E15;
 }

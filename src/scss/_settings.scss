@@ -13,7 +13,9 @@ html {
   font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
 }
-
+body {
+  min-width: 320px;
+}
 .page__body {
   margin: 0;
   min-width: 320px;
@@ -83,6 +85,12 @@ a {
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
   width: 100%;
+  @media (min-width: 768px) {
+    max-width: 90vw;
+  }
+  @media (min-width: 1240px) {
+    max-width: var(--container-width);
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -105,4 +113,220 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.font16gs {
+  font-family: GillSans;
+  font-weight: 600;
+  line-height: 1.1rem;
+  letter-spacing: -0.03em;
+  font-size: 1rem;
+  @media (min-width: 768px) {
+    font-size: 1.11vw;
+    line-height: 1.22vw;
+  }
+  @media (min-width: 1240px) {
+    font-size: 1rem;
+    line-height: 1.1rem;
+  }
+}
+.phone {
+  font-family: GillSans;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 19.8px;
+  letter-spacing: -0.03em;
+  color: black;
+  transition: .4s;
+  &:hover {
+    color: var(--g);
+  }
+  @media (min-width: 768px) {
+    font-size: 1.66vw;
+    line-height: 1.83vw;
+  }
+  @media (min-width: 1240px) {
+    font-size: 24px;
+    line-height: 26.4px;
+  }
+}
+
+.font12o {
+  font-family: Onest;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-align: left;
+  @media (min-width: 768px) {
+    font-size: .83vw;
+  }
+  @media (min-width: 1240px) {
+    font-size: 12px;
+  }
+}
+
+.font18o {
+  font-family: Onest;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  @media (min-width: 768px) {
+    font-size: 1.12vw;
+    line-height: 1.5vw;
+  }
+  @media (min-width: 1240px) {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+}
+
+.font15o {
+  font-family: Onest;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 16.5px;
+  letter-spacing: -0.03em;
+  text-align: left;
+
+  @media (min-width: 768px) {
+    font-size: 1.04vw;
+    line-height: 1.14vw;
+  }
+  @media (min-width: 1240px) {
+    font-size: 15px;
+    line-height: 16.5px;
+  }
+}
+
+.social_grey {
+  width: 25.5px;
+  height: 25.5px;
+  @media (min-width: 768px) {
+    width: 2.36vw;
+    height: 2.36vw;
+  }
+  @media (min-width: 1240px) {
+    width: 34px;
+    height: 34px;
+  }
+  & > svg {
+    width: 100%;
+    height: 100%;
+  }
+  & > svg path {
+    transition: .4s;
+    fill: #C5C5D7;
+  }
+  &:hover {
+    & > svg path {
+      fill: var(--g);
+    }
+  }
+}
+
+.small-button {
+  border: 1px solid #7B7C8F;
+  font-family: Onest;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 14.3px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  padding: 6px 24.5px;
+  border-radius: 2px;
+  background: white;
+
+  @media (min-width: 768px) {
+    font-size: .97vw;
+    line-height: 1vw;
+    padding: .41vw 1.66vw;
+    cursor: pointer;
+    transition: .4s;
+    &:hover {
+      color: var(--g);
+      border-color: var(--g);
+    }
+  }
+  @media (min-width: 1240px) {
+    font-size: 14px;
+    line-height: 15.4px;
+    padding: 6px 24.5px;
+  }
+}
+.button-without-border {
+  background: unset;
+  border: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px 8px;
+  gap: 13px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 19px;
+  font-family: Onest;
+  @media (min-width: 768px) {
+      
+  }
+  @media (min-width: 1240px) {
+
+  }
+  &:hover {
+    span {
+      border-color: black;
+      color: var(--g);
+    }
+  }
+  span {
+    display: block;
+    border-bottom: 1px solid #D2D3DF;
+    transition: .4s;
+  }
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    @media (min-width: 768px) {
+      width: 1.66vw;
+      height: 1.66vw;
+    }
+    @media (min-width: 1240px) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+.big-button {
+  min-height: 50px;
+  background: var(--g);
+  font-family: Onest;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: white;
+  padding: 0 62px;
+  width: fit-content;
+  border: unset;
+  cursor: pointer;
+  transition: .4s;
+  &:hover {
+    opacity: .8;
+  }
+  @media (min-width: 768px) {
+    font-size: 1.38vw;
+    line-height: 1.52vw;
+    padding: 0 4.30vw;
+    min-height: 4.86vw;
+  }
+  @media (min-width: 1240px) {
+    font-size: 20px;
+    line-height: 22px;
+    padding: 0 62px;
+    min-height: 70px;
+  }
 }
