@@ -10,6 +10,8 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_about__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/about */ "./src/js/components/about.js");
+/* harmony import */ var _components_portfolio__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/portfolio */ "./src/js/components/portfolio.js");
+
 
 
 /***/ }),
@@ -190,6 +192,56 @@ const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-about
     el: '.swiper-pagination',
     clickable: true
   }
+});
+
+/***/ }),
+
+/***/ "./src/js/components/portfolio.js":
+/*!****************************************!*\
+  !*** ./src/js/components/portfolio.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectFade, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs]);
+var thumbSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".thumbs-slider-js", {
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true
+});
+var portfolio = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".portfolio-js", {
+  slidesPerView: 1.2,
+  effect: "fade",
+  // navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  // },
+
+  thumbs: {
+    swiper: thumbSlider
+  }
+});
+portfolio.on('slideChange', function () {
+  var activeSlideIndex = portfolio.realIndex;
+  var infoContainers = document.querySelectorAll('.portfolio__info-container');
+  infoContainers.forEach(function (container) {
+    var infoSlides = container.querySelectorAll('.portfolio__info');
+    infoSlides.forEach(function (infoSlide) {
+      if (infoSlide.dataset.slide === activeSlideIndex.toString()) {
+        infoSlide.style.display = 'block';
+      } else {
+        infoSlide.style.display = 'none';
+      }
+    });
+  });
+});
+const video = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-video-js', {
+  slidesPerView: 3,
+  spaceBetween: 10
 });
 
 /***/ }),
