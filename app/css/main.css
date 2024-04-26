@@ -2153,6 +2153,18 @@ a {
   padding-top: 40px;
   margin-bottom: 200px;
 }
+@media (max-width: 768px) {
+  .video__container {
+    margin: -32px;
+    width: 100vw;
+  }
+}
+@media (max-width: 375px) {
+  .video__container {
+    margin: -15px;
+    width: 100vw;
+  }
+}
 @media (min-width: 768px) {
   .video {
     padding-top: 6.94vw;
@@ -2164,9 +2176,23 @@ a {
   }
 }
 .video .h3 img {
-  -webkit-transform: translateY(2px);
-  -ms-transform: translateY(2px);
-  transform: translateY(2px);
+  width: 13px;
+  height: 13px;
+}
+@media (min-width: 768px) {
+  .video .h3 img {
+    width: 1.73vw;
+    height: 1.73vw;
+    -webkit-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+}
+@media (min-width: 1240px) {
+  .video .h3 img {
+    width: 25px;
+    height: 25px;
+  }
 }
 .video__container {
   margin-top: 20px;
@@ -2183,13 +2209,23 @@ a {
   }
 }
 .video__container .swiper-slide {
-  height: 193px;
+  height: 47vw;
   position: relative;
   overflow: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+@media (min-width: 768px) {
+  .video__container .swiper-slide {
+    height: 17.73vw;
+  }
+}
+@media (min-width: 1240px) {
+  .video__container .swiper-slide {
+    height: 254px;
+  }
 }
 .video__container .swiper-slide::before {
   content: "";
@@ -2232,24 +2268,28 @@ a {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-@media (min-width: 768px) {
-  .video__container .swiper-slide {
-    height: 17.73vw;
-  }
-}
-@media (min-width: 1240px) {
-  .video__container .swiper-slide {
-    height: 254px;
-  }
-}
 .video__container .swiper-slide .content {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding-left: 37px;
-  padding-bottom: 34px;
-  padding-right: 100px;
+  padding-left: 28px;
+  padding-bottom: 25px;
+  padding-right: 28px;
   z-index: 1;
+}
+@media (min-width: 768px) {
+  .video__container .swiper-slide .content {
+    padding-left: 2.56vw;
+    padding-bottom: 2.36vw;
+    padding-right: 6.94vw;
+  }
+}
+@media (min-width: 1240px) {
+  .video__container .swiper-slide .content {
+    padding-left: 37px;
+    padding-bottom: 34px;
+    padding-right: 100px;
+  }
 }
 .video__container .swiper-slide .content p {
   font-family: Onest;

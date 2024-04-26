@@ -1583,6 +1583,19 @@ a {
 .video {
   padding-top: 40px;
   margin-bottom: 200px;
+
+  @media (max-width: 768px) {
+    &__container {
+      margin: -32px;
+      width: 100vw;
+    }
+  }
+  @media (max-width: 375px) {
+    &__container {
+      margin: -15px;
+      width: 100vw;
+    }
+  }
   @media (min-width: 768px) {
     padding-top: 6.94vw;
   }
@@ -1591,7 +1604,18 @@ a {
   }
   .h3 {
     img {
-      transform: translateY(2px);
+      
+      width: 13px;
+      height: 13px;
+      @media (min-width: 768px) {
+        width: 1.73vw;
+        height: 1.73vw;
+        transform: translateY(2px);
+      }
+      @media (min-width: 1240px) {
+        width: 25px;
+        height: 25px;
+      }
     }
   }
   &__container {
@@ -1604,10 +1628,16 @@ a {
       margin-top: 34px;
     }
     .swiper-slide {
-      height: 193px;
+      height: 47vw;
       position: relative;
       overflow: hidden;
       user-select: none;
+      @media (min-width: 768px) {
+        height: 17.73vw;
+      }
+      @media (min-width: 1240px) {
+        height: 254px;
+      }
       &::before {
         content: '';
         transition: .4s;
@@ -1644,20 +1674,25 @@ a {
         object-fit: cover;
         transition: .4s;
       }
-      @media (min-width: 768px) {
-        height: 17.73vw;
-      }
-      @media (min-width: 1240px) {
-        height: 254px;
-      }
+
       .content {
         position: absolute;
         bottom: 0;
         left: 0;
-        padding-left: 37px;
-        padding-bottom: 34px;
-        padding-right: 100px;
+        padding-left: 28px;
+        padding-bottom: 25px;
+        padding-right: 28px;
         z-index: 1;
+        @media (min-width: 768px) {
+          padding-left: 2.56vw;
+          padding-bottom: 2.36vw;
+          padding-right: 6.94vw;
+        }
+        @media (min-width: 1240px) {
+          padding-left: 37px;
+          padding-bottom: 34px;
+          padding-right: 100px;
+        }
         p {
           font-family: Onest;
           font-size: 18px;

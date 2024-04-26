@@ -240,8 +240,13 @@ portfolio.on('slideChange', function () {
   });
 });
 const video = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-video-js', {
-  slidesPerView: 3,
-  spaceBetween: 10
+  slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints: {
+    768: {
+      slidesPerView: 3
+    }
+  }
 });
 
 /***/ }),
