@@ -1,6 +1,8 @@
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
+import './functions/burger';
+
 // Определение операционной системы на мобильных
 import { mobileCheck } from "./functions/mobile-check";
 
@@ -22,17 +24,17 @@ import { mobileCheck } from "./functions/mobile-check";
 import './functions/fix-fullheight';
 import './functions/more-button';
 
-import inputmask from 'inputmask'
-const phoneMasks = document.querySelectorAll('.phone-mask--js');
+// import inputmask from 'inputmask'
+// const phoneMasks = document.querySelectorAll('.phone-mask--js');
 
-if (phoneMasks.length > 0) {
-  phoneMasks.forEach(function($phoneMask) {
-    inputmask__WEBPACK_IMPORTED_MODULE_3___default()({
-      mask: '+7 (999) 999-99-99',
-      showMaskOnHover: false
-    }).mask($phoneMask);
-  });
-}
+// if (phoneMasks.length > 0) {
+//   phoneMasks.forEach(function($phoneMask) {
+//     inputmask__WEBPACK_IMPORTED_MODULE_3___default()({
+//       mask: '+7 (999) 999-99-99',
+//       showMaskOnHover: false
+//     }).mask($phoneMask);
+//   });
+// }
 
 // Реализация бургер-меню
 import { burger } from './functions/burger';

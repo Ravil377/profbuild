@@ -2,8 +2,8 @@ import { disableScroll } from '../functions/disable-scroll';
 import { enableScroll } from '../functions/enable-scroll';
 
 (function(){
-  // const burger = document?.querySelector('[data-burger]');
-  // const menu = document?.querySelector('[data-menu]');
+  const burger = document?.querySelector('[data-burger]');
+  const menu = document?.querySelector('[data-menu]');
   // const logo = document?.querySelector('[data-logo]');
   // const header = document?.querySelector('[data-header]');
   // const menuItems = document?.querySelectorAll('[data-menu-item]');
