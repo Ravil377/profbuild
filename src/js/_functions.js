@@ -24,17 +24,18 @@ import { mobileCheck } from "./functions/mobile-check";
 import './functions/fix-fullheight';
 import './functions/more-button';
 
-// import inputmask from 'inputmask'
-// const phoneMasks = document.querySelectorAll('.phone-mask--js');
+import Inputmask from 'inputmask'; // Поправьте имя переменной для модуля Inputmask
 
-// if (phoneMasks.length > 0) {
-//   phoneMasks.forEach(function($phoneMask) {
-//     inputmask__WEBPACK_IMPORTED_MODULE_3___default()({
-//       mask: '+7 (999) 999-99-99',
-//       showMaskOnHover: false
-//     }).mask($phoneMask);
-//   });
-// }
+const phoneMasks = document.querySelectorAll('.phone-mask--js');
+
+if (phoneMasks.length > 0) {
+  phoneMasks.forEach(function($phoneMask) {
+    Inputmask({
+      mask: '+7 (999) 999-99-99',
+      showMaskOnHover: false
+    }).mask($phoneMask);
+  });
+}
 
 // Реализация бургер-меню
 import { burger } from './functions/burger';
@@ -54,7 +55,7 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 
 // Реализация табов
 import GraphTabs from 'graph-tabs';
-// const tabs = new GraphTabs('tab');
+const tabs = new GraphTabs('tab');
 
 // Получение высоты шапки сайта (не забудьте вызвать функцию)
 // import { getHeaderHeight } from './functions/header-height';

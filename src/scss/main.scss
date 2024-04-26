@@ -59,7 +59,7 @@ p {
 .form__placeholder-container input, 
 .form__placeholder-container textarea {
   // border: none;
-  border-radius: 10px;
+  // border-radius: 10px;
   border: 1px solid #D6D8DF;
   background: #FFF;
   box-sizing: border-box;
@@ -67,25 +67,33 @@ p {
   width: 100%;
 
   color: #000;
-  font-family: Manrope;
-  font-size: 18px;
-  font-style: normal;
+
+  font-family: Onest;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 110%;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  
 
-
-
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 19px;
+  padding-right: 19px;
   box-sizing: border-box;
-  min-height: 50px;
-}
-@media (min-width: 576px) {
-  .form__placeholder-container input, 
-  .form__placeholder-container textarea {
-    padding-left: 25px;
-    padding-right: 25px;
-    min-height: 60px;
+  height: 50px;
+  @media (min-width: 768px) {
+    // height: 3.47vw;
+    padding-left: 1.59vw;
+    padding-right: 1.59vw;
+    font-size: 1.25vw;
+    font-weight: 600;
+    line-height: 1.53vw;
+  }
+  @media (min-width: 1240px) {
+    // height: 50px;
+    padding-left: 23px;
+    padding-right: 23px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.95px;
   }
 }
 
@@ -93,23 +101,19 @@ p {
   width: fit-content;
   color: #000;
   font-variant-numeric: lining-nums proportional-nums;
-  font-size: 18px;
-  font-style: normal;
+
+  font-family: Onest;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 110%; 
+  line-height: 17.85px;
+
   
   pointer-events: none;
   position: absolute;
   transition: all 200ms;
-  top: 14px;
-  left: 15px;
-}
-@media (min-width: 576px) {
-  .form__placeholder-container label {
-    top: 19px;
-    left: 25px;
-  }
-
+  top: -20px;
+  left: 0;
+  color: white;
 }
 .wpcf7-spinner {display: none;}
 .form__placeholder-container label span {
@@ -117,33 +121,7 @@ p {
   color: #A4A4A4;
 }
 
-.form__placeholder-container input:focus + label,
-.form__placeholder-container input:not(:placeholder-shown) + label {
-  top: -20px;
-  left: 0;
 
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 110%;
-  letter-spacing: -0.14px;
-}
-.form__placeholder-container:not(._black) input:focus + label,
-.form__placeholder-container:not(._black) input:not(:placeholder-shown) + label {
-  color: #FFF;
-}
-
-.form__placeholder-container._black input:focus + label,
-.form__placeholder-container._black input:not(:placeholder-shown) + label {
-  color: #000;
-}
-
-
-.form__placeholder-container textarea:focus + label,
-.form__placeholder-container textarea:not(:placeholder-shown) + label {
-  top: -20px;
-  left: 0;
-}
 
 .form__checkbox {
   height: fit-content;
