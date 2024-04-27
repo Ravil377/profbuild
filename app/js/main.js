@@ -248,6 +248,16 @@ const video = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-video-
     }
   }
 });
+let inputs = document.querySelectorAll('.input__file');
+inputs.forEach(function (input) {
+  let label = input.closest('.form-group').querySelector('.label'),
+    labelVal = label.querySelector('.input__file-button-text').textContent;
+  input.addEventListener('change', function () {
+    let countFiles = this.files ? this.files.length : 0;
+    let labelText = countFiles ? 'Выбрано файлов: ' + countFiles : labelVal;
+    label.querySelector('.input__file-button-text').textContent = labelText;
+  });
+});
 
 /***/ }),
 
