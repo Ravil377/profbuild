@@ -2087,7 +2087,12 @@ a {
 }
 .portfolio .portfolio__slider {
   width: 100vw;
-  margin-left: -33px;
+  margin-left: -15px;
+}
+@media (min-width: 375px) {
+  .portfolio .portfolio__slider {
+    margin-left: -33px;
+  }
 }
 @media (min-width: 768px) {
   .portfolio .portfolio__slider {
@@ -2197,10 +2202,19 @@ a {
 .video__container {
   margin-top: 20px;
   overflow: hidden;
+  margin-left: -15px;
+  width: 100vw;
+}
+@media (min-width: 375px) {
+  .video__container {
+    margin-left: -32px;
+  }
 }
 @media (min-width: 768px) {
   .video__container {
     margin-top: 2.36vw;
+    margin-left: unset;
+    width: unset;
   }
 }
 @media (min-width: 1240px) {
@@ -2210,6 +2224,7 @@ a {
 }
 .video__container .swiper-slide {
   height: 47vw;
+  min-height: 193px;
   position: relative;
   overflow: hidden;
   -webkit-user-select: none;
@@ -2231,15 +2246,31 @@ a {
   content: "";
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  width: 35px;
-  height: 38px;
+  width: 26px;
+  height: 29px;
   position: absolute;
-  right: 39px;
-  bottom: 49px;
+  right: 31px;
+  bottom: 37px;
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;
   background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_4915_612)'%3E%3Cpath d='M4.6603 0.551231C2.40641 -0.741633 0.579102 0.317496 0.579102 2.91497V22.0832C0.579102 24.6833 2.40641 25.741 4.6603 24.4494L21.4143 14.8411C23.6689 13.5478 23.6689 11.4524 21.4143 10.1594L4.6603 0.551231Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_4915_612'%3E%3Crect width='25' height='25' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+@media (min-width: 768px) {
+  .video__container .swiper-slide::before {
+    right: 2.7vw;
+    bottom: 3.4vw;
+    width: 2.43vw;
+    height: 2.63vw;
+  }
+}
+@media (min-width: 1240px) {
+  .video__container .swiper-slide::before {
+    right: 39px;
+    bottom: 49px;
+    width: 35px;
+    height: 38px;
+  }
 }
 .video__container .swiper-slide:hover::before {
   -webkit-transform: scale(1.2);
