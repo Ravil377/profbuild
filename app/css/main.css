@@ -403,6 +403,7 @@ a {
   font-weight: 600;
   line-height: 19px;
   font-family: Onest;
+  color: black;
 }
 .button-without-border:hover span {
   border-color: black;
@@ -437,7 +438,6 @@ a {
   min-height: 50px;
   background: var(--g);
   font-family: Onest;
-  display: block;
   font-size: 18px;
   font-weight: 600;
   line-height: 110%;
@@ -449,6 +449,12 @@ a {
   width: fit-content;
   border: unset;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -4158,6 +4164,9 @@ a {
     -ms-transform: translateY(-185px);
     transform: translateY(-185px);
   }
+}
+.about__right .swiper-slide {
+  height: auto;
 }
 .about__right .swiper-slide.swiper-slide-active figcaption {
   opacity: 1;

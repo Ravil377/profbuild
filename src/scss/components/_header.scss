@@ -591,6 +591,7 @@
         }
         .swiper {
             &-slide {
+                height: auto;
                 &.swiper-slide-active {
                     figcaption {
                         opacity: 1;

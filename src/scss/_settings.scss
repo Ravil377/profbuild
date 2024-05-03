@@ -289,6 +289,7 @@ a {
   font-weight: 600;
   line-height: 19px;
   font-family: Onest;
+  color: black;
   @media (min-width: 768px) {
       
   }
@@ -324,7 +325,6 @@ a {
   min-height: 50px;
   background: var(--g);
   font-family: Onest;
-  display: block;
   font-size: 18px;
   font-weight: 600;
   line-height: 110%;
@@ -334,6 +334,8 @@ a {
   width: fit-content;
   border: unset;
   cursor: pointer;
+  display: flex;
+  align-items: center;
   transition: .4s;
   &:hover {
     opacity: .8;
