@@ -4572,6 +4572,135 @@ a {
   }
 }
 
+.seo {
+  padding: 40px 0;
+  background: white url(/img/seo-bg.png) no-repeat -11% top/cover;
+}
+@media (min-width: 992px) {
+  .seo {
+    padding-top: 4.86vw;
+    padding-bottom: 9.72vw;
+    background: white url(/img/seo-bg.png) no-repeat 80% bottom/contain;
+  }
+}
+@media (min-width: 1240px) {
+  .seo {
+    padding-top: 70px;
+    padding-bottom: 140px;
+  }
+}
+.seo h2 {
+  font-family: Gill Sans;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26.4px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  max-width: 809px;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  .seo h2 {
+    font-size: 2.77vw;
+    line-height: 3vw;
+    max-width: 56.18vw;
+  }
+}
+@media (min-width: 1240px) {
+  .seo h2 {
+    font-size: 40px;
+    line-height: 44px;
+    max-width: 809px;
+  }
+}
+.seo .seo__content {
+  margin-top: 30px;
+}
+@media (min-width: 992px) {
+  .seo .seo__content {
+    margin-top: 2.08vw;
+  }
+}
+@media (min-width: 1240px) {
+  .seo .seo__content {
+    margin-top: 30px;
+  }
+}
+.seo .seo__content p {
+  font-family: Onest;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17.6px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+.seo .seo__content p:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .seo .seo__content p:not(:last-child) {
+    margin-bottom: 2.08vw;
+  }
+}
+@media (min-width: 1240px) {
+  .seo .seo__content p:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.seo .seo__content p strong {
+  font-family: Onest;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 19.8px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+@media (min-width: 992px) {
+  .seo .seo__content p strong {
+    font-size: 1.52vw;
+    line-height: 1.37vw;
+  }
+}
+@media (min-width: 1240px) {
+  .seo .seo__content p strong {
+    font-size: 22px;
+    line-height: 28.6px;
+  }
+}
+@media (min-width: 992px) {
+  .seo .seo__content p {
+    font-size: 1.25vw;
+    line-height: 1.62vw;
+  }
+}
+@media (min-width: 1240px) {
+  .seo .seo__content p {
+    font-size: 18px;
+    line-height: 23.4px;
+  }
+}
+.seo .seo__content h3 {
+  font-family: Gill Sans;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  .seo .seo__content h3 {
+    font-size: 2.08vw;
+    line-height: 1.52vw;
+  }
+}
+@media (min-width: 1240px) {
+  .seo .seo__content h3 {
+    font-size: 30px;
+    line-height: 33px;
+  }
+}
+
 p {
   margin: unset;
 }
